@@ -29,7 +29,7 @@ public void MyMethod()
 
 3. In your application startup code, call the RollerCoasterMethodExecutor.ExecuteRollerCoasterMethods method:
 
-```
+```csharp
 var serviceProvider = // Your service provider instance
 RollerCoasterMethodExecutor.ExecuteRollerCoasterMethods(serviceProvider);
 ```
