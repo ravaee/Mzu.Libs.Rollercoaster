@@ -1,5 +1,6 @@
 ﻿using mzu.libs.rollercoaster.examples.webapi.Helpers;
 using mzu.libs.rollercoaster.examples.webapi.Repository;
+using Mzu.Libs.Rollercoaster;
 
 namespace mzu.libs.rollercoaster.examples.WebApi.Services;
 

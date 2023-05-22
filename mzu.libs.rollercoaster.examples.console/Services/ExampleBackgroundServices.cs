@@ -1,4 +1,6 @@
-﻿namespace mzu.libs.rollercoaster.examples.console.Services;
+﻿using Mzu.Libs.Rollercoaster;
+
+namespace mzu.libs.rollercoaster.examples.console.Services;
 
 public class ExampleBackgroundServices
 {

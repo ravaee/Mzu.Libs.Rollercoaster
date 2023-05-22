@@ -1,6 +1,5 @@
 ﻿using mzu.libs.rollercoaster;
-
-
+using Mzu.Libs.Rollercoaster;
 
 RollerCoasterMethodExecutor.ExecuteRollerCoasterMethods(null);
 

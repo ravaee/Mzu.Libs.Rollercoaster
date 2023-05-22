@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using mzu.libs.rollercoaster;
 using mzu.libs.rollercoaster.examples.webapi.Repository;
+using Mzu.Libs.Rollercoaster;
 
 var builder = WebApplication.CreateBuilder(args);
 
