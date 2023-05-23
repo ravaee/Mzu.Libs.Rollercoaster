@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Mzu.Libs.Rollercoaster.Configurations;
 using System.Collections.Concurrent;
 using System.Reflection;
 
@@ -12,9 +13,9 @@ public static class RollerCoasterMethodExecutor
 
     private static IServiceProvider? _serviceProvider;
 
-    public static void ExecuteRollerCoasterMethods(IServiceProvider serviceProvider)
+    public static void ExecuteRollerCoasterMethods()
     {
-        _serviceProvider = serviceProvider;
+        _serviceProvider = Session.ConfiguredOptions.ServiceProvider;
 
         var rollerCoasterMethods = (Assembly.GetEntryAssembly() ?? throw new ArgumentNullException($"[{nameof(Assembly.GetEntryAssembly)}]"))
             .GetTypes()

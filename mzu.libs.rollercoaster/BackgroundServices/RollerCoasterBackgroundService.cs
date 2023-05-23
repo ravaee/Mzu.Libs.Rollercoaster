@@ -11,10 +11,10 @@ public class RollerCoasterBackgroundService : BackgroundService
     private readonly int _interval;
     private readonly SemaphoreSlim _semaphoreSlim;
 
-    public RollerCoasterBackgroundService(MethodInfo method, int interval, SemaphoreSlim semaphoreSlim)
+    public RollerCoasterBackgroundService(MethodInfo method, int? interval, SemaphoreSlim semaphoreSlim)
     {
         _method = method;
-        _interval = interval;
+        _interval = interval.Value;
         _semaphoreSlim = semaphoreSlim;
     }
 
