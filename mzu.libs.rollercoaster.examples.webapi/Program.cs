@@ -2,6 +2,8 @@ using Microsoft.AspNetCore.Mvc;
 using mzu.libs.rollercoaster;
 using mzu.libs.rollercoaster.examples.webapi.Repository;
 using Mzu.Libs.Rollercoaster;
+using Mzu.Libs.Rollercoaster.Extensions;
+using Mzu.Libs.Rollercoaster.Options;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,6 +11,12 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddScoped<IExampleRepository, ExampleRepository>();
+
+builder.Services.RegisterRollerCoaster((options) =>
+{
+    options.ServiceProvider = builder.Services.BuildServiceProvider();
+    options.DefaultInterval = 1000;
+});
 
 var app = builder.Build();
 
@@ -25,7 +33,7 @@ app.MapGet("/services/StartAll", () =>
 {
 	try
 	{
-        RollerCoasterMethodExecutor.ExecuteRollerCoasterMethods(builder.Services.BuildServiceProvider());
+        RollerCoasterMethodExecutor.ExecuteRollerCoasterMethods();
 
         return Results.Ok("Services are running successfully.");
     }
