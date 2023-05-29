@@ -106,8 +106,9 @@ For instance, if you wish for Method1 to execute every 5 seconds instead of the 
 
 3. If the environment variable is defined, the RollerCoaster library will use its value as the interval; otherwise, the default interval specified in the RollerCoaster attribute will be used.
 
-##Contributing
+
+## Contributing
 Contributions to the RollerCoaster Project are welcome! If you find a bug, have an enhancement request, or want to contribute code, please open an issue or submit a pull request.
 
-##License
+## License
 The RollerCoaster Project is licensed under the MIT License. See the LICENSE file for more information.
