@@ -1,0 +1,9 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/mzu.libs.rollercoaster.examples.console/obj
+/mzu.libs.rollercoaster/obj
+/mzu.libs.rollercoaster.examples.webapi/obj
+*.user
+.vs
