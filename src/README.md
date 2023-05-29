@@ -16,7 +16,7 @@ To use the RollerCoaster Project in your own project, follow these steps:
 
 1. Install the RollerCoaster NuGet package:
 
-```dotnet add package RollerCoaster```
+```dotnet add package Mzu.Libs.Rollercoaster```
 
 2. Add the RollerCoaster attribute to the methods you want to schedule for periodic execution:
 ```csharp
@@ -27,23 +27,34 @@ public void MyMethod()
 }
 ```
 
-3. In your application startup code, call the RollerCoasterMethodExecutor.ExecuteRollerCoasterMethods method:
 
+### Configure for Console apps with no ServiceProvider configured.
+Easily just use the **ExecuteRollerCoasterMethods** method without any further configs. 
 ```csharp
-var serviceProvider = // Your service provider instance
-RollerCoasterMethodExecutor.ExecuteRollerCoasterMethods(serviceProvider);
+RollerCoasterMethodExecutor.ExecuteRollerCoasterMethods();
 ```
 
-4. Run your application and observe the scheduled methods executing at the specified intervals.
+### Configure for ASP.NET projects.
+ 
+```csharp
+builder.Services.RegisterRollerCoaster((options) =>
+{
+    options.ServiceProvider = builder.Services.BuildServiceProvider();
+    options.DefaultInterval = 1000;
+});
+```
 
-###RollerCoasterAttribute
+3. Run your application and observe the scheduled methods executing at the specified intervals.
+
+##RollerCoasterAttribute
+
 The RollerCoasterAttribute is used to mark methods for scheduled execution. It provides the following options:
 
 interval: Specifies the interval in milliseconds at which the method should be executed.
 group (optional): Specifies the group to which the background service belongs.
 name (optional): Specifies a name for the background service.
 
-##RollerCoasterExample
+### RollerCoasterExample
 The RollerCoasterExample class is an example class that demonstrates the usage of the RollerCoaster Project. It contains methods marked with the RollerCoasterAttribute for scheduling execution.
 
 ```csharp
