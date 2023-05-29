@@ -85,11 +85,10 @@ public class RollerCoasterExample
 
 RollerCoaster allows the intervals defined for methods to be overridden at runtime using environment variables. This enables the adjustment of execution intervals in different environments without the need for code changes. 
 
-#### Steps
 
-1. Define an environment variable with a name matching the `Name` value given in the `RollerCoaster` attribute, appended with `_Interval`.
+Define an environment variable with a name matching the `Name` value given in the `RollerCoaster` attribute, appended with `_Interval`.
 
-   For example, if you have a method defined with the `RollerCoaster` attribute as follows:
+For example, if you have a method defined with the `RollerCoaster` attribute as follows:
    
    ```csharp
    [RollerCoaster(2000, "group1", "Method1")]
@@ -100,12 +99,33 @@ RollerCoaster allows the intervals defined for methods to be overridden at runti
    ```
 The corresponding environment variable would be named Method1_Interval.
 
-2. The value of the environment variable should represent the desired interval in milliseconds.
+### Setting Environment Variables in ASP.NET Core
 
-For instance, if you wish for Method1 to execute every 5 seconds instead of the 2 seconds initially specified in the code, you should set Method1_Interval to 5000.
+The value of the environment variable should represent the desired interval in milliseconds.
+Setting Environment Variables in ASP.NET Core
+You can set environment variables in ASP.NET Core applications by using the appsettings.json or appsettings.{Environment}.json files. Here's an example of how you could set the Method1_Interval variable in the appsettings.json file:
 
-3. If the environment variable is defined, the RollerCoaster library will use its value as the interval; otherwise, the default interval specified in the RollerCoaster attribute will be used.
+```json
+{
+  "Method1_Interval": "5000"
+}
+```
 
+This will set the interval for Method1 to 5 seconds in all environments. If you want to set a different interval for a specific environment (like Development), you could do this in the appsettings.Development.json file:
+
+```json
+{
+  "Method1_Interval": "10000"
+}
+```
+This will set the interval for Method1 to 10 seconds in the Development environment.
+
+### Setting Environment Variables in Docker
+If you're running your application in a Docker container, you can set environment variables using the -e option with the docker run command:
+
+```docker
+docker run -e Method1_Interval=5000 -d my-aspnet-app
+```
 
 ## Contributing
 Contributions to the RollerCoaster Project are welcome! If you find a bug, have an enhancement request, or want to contribute code, please open an issue or submit a pull request.
