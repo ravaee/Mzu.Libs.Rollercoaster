@@ -81,6 +81,31 @@ public class RollerCoasterExample
 }
 ```
 
+### Overriding the Interval with Environment Variables
+
+RollerCoaster allows the intervals defined for methods to be overridden at runtime using environment variables. This enables the adjustment of execution intervals in different environments without the need for code changes. 
+
+#### Steps
+
+1. Define an environment variable with a name matching the `Name` value given in the `RollerCoaster` attribute, appended with `_Interval`.
+
+   For example, if you have a method defined with the `RollerCoaster` attribute as follows:
+   
+   ```csharp
+   [RollerCoaster(2000, "group1", "Method1")]
+   public void Method1()
+   {
+       // method logic here
+   }
+   ```
+The corresponding environment variable would be named Method1_Interval.
+
+2. The value of the environment variable should represent the desired interval in milliseconds.
+
+For instance, if you wish for Method1 to execute every 5 seconds instead of the 2 seconds initially specified in the code, you should set Method1_Interval to 5000.
+
+3. If the environment variable is defined, the RollerCoaster library will use its value as the interval; otherwise, the default interval specified in the RollerCoaster attribute will be used.
+
 ##Contributing
 Contributions to the RollerCoaster Project are welcome! If you find a bug, have an enhancement request, or want to contribute code, please open an issue or submit a pull request.
 
