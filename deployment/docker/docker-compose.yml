@@ -1,0 +1,10 @@
+# ./deployment/docker/docker-compose.yml
+version: '3.8'
+services:
+  rollercoasterwebapi:
+    build:
+      context: ../../src/
+      dockerfile: ./mzu.libs.rollercoaster.examples.webapi/Dockerfile
+    environment:
+      - Method1_Interval=6000 # overriding Method1 interval 
+      - Method2_Interval=4000 # overriding Method2 interval 

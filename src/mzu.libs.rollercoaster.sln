@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33122.133
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Samples", "Samples", "{4A0B30F4-EB61-4162-9270-40F4E91779B8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lib", "Lib", "{C60CBDDC-FC28-4078-BE95-443E2A4D5119}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mzu.Libs.Rollercoaster", "mzu.libs.rollercoaster\Mzu.Libs.Rollercoaster.csproj", "{C0A06B23-A683-4638-B21F-2EDECBBFB9B1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mzu.Libs.Rollercoaster.Unittest", "Mzu.Libs.Rollercoaster.Unittest\Mzu.Libs.Rollercoaster.Unittest.csproj", "{84D0EE13-D84C-4798-81E6-6387432B48E3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "mzu.libs.rollercoaster.examples.webapi", "mzu.libs.rollercoaster.examples.webapi\mzu.libs.rollercoaster.examples.webapi.csproj", "{FC6EE22A-C8A4-4FFA-AF71-BC4762BB90DE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C0A06B23-A683-4638-B21F-2EDECBBFB9B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0A06B23-A683-4638-B21F-2EDECBBFB9B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0A06B23-A683-4638-B21F-2EDECBBFB9B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0A06B23-A683-4638-B21F-2EDECBBFB9B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84D0EE13-D84C-4798-81E6-6387432B48E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84D0EE13-D84C-4798-81E6-6387432B48E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84D0EE13-D84C-4798-81E6-6387432B48E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84D0EE13-D84C-4798-81E6-6387432B48E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC6EE22A-C8A4-4FFA-AF71-BC4762BB90DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC6EE22A-C8A4-4FFA-AF71-BC4762BB90DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC6EE22A-C8A4-4FFA-AF71-BC4762BB90DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC6EE22A-C8A4-4FFA-AF71-BC4762BB90DE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C0A06B23-A683-4638-B21F-2EDECBBFB9B1} = {C60CBDDC-FC28-4078-BE95-443E2A4D5119}
+		{84D0EE13-D84C-4798-81E6-6387432B48E3} = {C60CBDDC-FC28-4078-BE95-443E2A4D5119}
+		{FC6EE22A-C8A4-4FFA-AF71-BC4762BB90DE} = {4A0B30F4-EB61-4162-9270-40F4E91779B8}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {95E2B8A3-E515-4CC4-896B-36C7A62C3A8A}
+	EndGlobalSection
+EndGlobal
